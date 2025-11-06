@@ -64,16 +64,17 @@ cp .env.example .env
 
 ```env
 # Supabase
-NEXT_PUBLIC_SUPABASE_URL=https://your-project.supabase.co
-NEXT_PUBLIC_SUPABASE_ANON_KEY=your-anon-key
+NUXT_PUBLIC_SUPABASE_URL=https://your-project.supabase.co
+NUXT_PUBLIC_SUPABASE_ANON_KEY=your-anon-key
 
 # Stripe
-NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY=pk_test_xxx
+NUXT_PUBLIC_STRIPE_PUBLISHABLE_KEY=pk_test_xxx
 STRIPE_SECRET_KEY=sk_test_xxx
 STRIPE_WEBHOOK_SECRET=whsec_xxx
 
 # LemonSqueezy
 LEMON_SQUEEZY_API_KEY=xxx
+LEMON_SQUEEZY_WEBHOOK_SECRET=xxx
 LEMON_SQUEEZY_STORE_ID=xxx
 
 # Mailgun

@@ -7,6 +7,14 @@ export default defineEventHandler(async (event) => {
   const { priceId } = await readBody(event)
   const origin = getHeader(event, 'origin')
 
+  // Validate priceId
+  if (!priceId || typeof priceId !== 'string' || priceId.trim() === '') {
+    throw createError({
+      statusCode: 400,
+      statusMessage: 'Invalid or missing priceId',
+    })
+  }
+
   try {
     const session = await stripe.checkout.sessions.create({
       mode: 'subscription',
