@@ -13,7 +13,7 @@ export default defineEventHandler(async (event) => {
     stripeEvent = stripe.webhooks.constructEvent(
       body as string,
       sig,
-      process.env.STRIPE_WEBHOOK_SECRET!
+      config.stripeWebhookSecret as string
     )
   } catch (err: any) {
     console.error(`Webhook Error: ${err.message}`)
