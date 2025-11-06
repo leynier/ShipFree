@@ -11,7 +11,7 @@ export async function getGitHubStars(repo: string): Promise<number> {
     }
 
     const data = await response.json()
-    return data.stargazers_count
+    return data.stargazers_count ?? 0
   } catch (error) {
     console.error("Error fetching GitHub stars:", error)
     return 0

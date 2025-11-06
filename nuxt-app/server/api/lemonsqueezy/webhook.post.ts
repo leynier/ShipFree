@@ -6,7 +6,7 @@ export default defineEventHandler(async (event) => {
   const signature = getHeader(event, 'x-signature') as string
 
   // Verify webhook signature
-  const secret = config.lemonSqueezyApiKey
+  const secret = config.lemonSqueezyWebhookSecret
   const hmac = crypto.createHmac('sha256', secret as string)
   const digest = hmac.update(body as string).digest('hex')
 
