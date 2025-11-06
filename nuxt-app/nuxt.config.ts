@@ -45,6 +45,7 @@ export default defineNuxtConfig({
   runtimeConfig: {
     // Private keys (server-side only)
     stripeSecretKey: process.env.STRIPE_SECRET_KEY,
+    stripeWebhookSecret: process.env.STRIPE_WEBHOOK_SECRET,
     lemonSqueezyApiKey: process.env.LEMON_SQUEEZY_API_KEY,
     lemonSqueezyStoreId: process.env.LEMON_SQUEEZY_STORE_ID,
     mailgunApiKey: process.env.MAILGUN_API_KEY,

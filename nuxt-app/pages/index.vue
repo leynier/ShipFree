@@ -99,7 +99,7 @@ useHead({
           </div>
           <div class="p-6 bg-[#2C2C2C] rounded-xl">
             <h3 class="text-xl font-bold text-white mb-2">What tech stack does it use?</h3>
-            <p class="text-zinc-400">Next.js 15, Supabase, Stripe, Tailwind CSS, and more.</p>
+            <p class="text-zinc-400">Nuxt 4, Supabase, Stripe, Tailwind CSS, and more.</p>
           </div>
         </div>
       </div>
