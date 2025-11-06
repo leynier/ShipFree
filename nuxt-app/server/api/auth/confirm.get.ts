@@ -4,7 +4,7 @@ export default defineEventHandler(async (event) => {
   const type = query.type as string
 
   if (token_hash && type) {
-    const supabase = await useSupabaseClient()
+    const supabase = await serverSupabaseClient(event)
     const { error } = await supabase.auth.verifyOtp({
       token_hash,
       type: type as any,
